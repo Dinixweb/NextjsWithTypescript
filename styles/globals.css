@@ -14,3 +14,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.taskHome {
+  height: 55vw;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+
+}
