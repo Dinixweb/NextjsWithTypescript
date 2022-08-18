@@ -2,8 +2,9 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import InputField from '../components/InputField'
+import { useState } from 'react'
 const Home: NextPage = () => {
-
+  const [todo, setTodo] = useState<string>("")
   return (
     <div className={styles.container}>
       <Head>
@@ -13,7 +14,7 @@ const Home: NextPage = () => {
       </Head>
       <div className="main taskHome">
         <h2 className='text-primary fs-2 mt-5'>TAASK</h2>
-       <InputField/>
+       <InputField todo={todo} setTodo={setTodo}/>
      </div>
     </div>
   )
