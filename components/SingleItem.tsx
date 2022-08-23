@@ -16,11 +16,15 @@ const SingleItem = ({ todo, todos, key, setTodos }: singleTodo) => {
    * @param id
    */
   const handleDone = (id: number) => {
-    setTodos(
-      todos.map((data) =>
-        data.id === id ? { ...data, isDone: !data.isDone } : todo
-      )
-    );
+      console.log(id)
+      let checkStatus = todos.filter((obj) => {
+          if (obj.id === id) {
+              console.log("value true")
+              obj.isDone = !obj.isDone
+          }
+          return obj
+      })
+      setTodos(checkStatus)
   };
 
   /**
