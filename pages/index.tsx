@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 import InputField from "../components/InputField";
 import { Todo } from "../interfaces/todo";
 import { useState } from "react";
@@ -12,7 +11,6 @@ const Home: NextPage = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
   const handleAddTask = () => {
     setTodos([...todos, { id, todo: todo, isDone: false }]);
-
     setTodo("");
   };
   return (

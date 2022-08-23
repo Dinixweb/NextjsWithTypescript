@@ -16,10 +16,8 @@ const SingleItem = ({ todo, todos, key, setTodos }: singleTodo) => {
    * @param id
    */
   const handleDone = (id: number) => {
-      console.log(id)
       let checkStatus = todos.filter((obj) => {
           if (obj.id === id) {
-              console.log("value true")
               obj.isDone = !obj.isDone
           }
           return obj
