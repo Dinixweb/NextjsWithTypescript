@@ -1,22 +1,20 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import InputField from '../components/InputField'
-import { Todo } from '../interfaces/todo'
-import { useState } from 'react'
-import TodoList from '../components/TodoList'
-
+import type { NextPage } from "next";
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import InputField from "../components/InputField";
+import { Todo } from "../interfaces/todo";
+import { useState } from "react";
+import TodoList from "../components/TodoList";
 
 const Home: NextPage = () => {
-
-  const id = Math.random()
-  const [todo, setTodo] = useState<string>("")
-  const [todos, setTodos] = useState<Todo[]>([])
+  const id = Math.random();
+  const [todo, setTodo] = useState<string>("");
+  const [todos, setTodos] = useState<Todo[]>([]);
   const handleAddTask = () => {
-    setTodos([...todos, { id , todo: todo, isDone: false }])
-    
-    setTodo("")
-  }
+    setTodos([...todos, { id, todo: todo, isDone: false }]);
+
+    setTodo("");
+  };
   return (
     <div>
       <Head>
@@ -27,17 +25,20 @@ const Home: NextPage = () => {
       <div className="taskHome container d-flex align-items-center flex-column">
         <div className="title text-light mt-5">
           <h2>Weclome to TAASK Demo</h2>
-       </div>
+        </div>
         <div className="input mt-3">
-             <InputField todo={todo} setTodo={setTodo} handleAddTask={handleAddTask} />
+          <InputField
+            todo={todo}
+            setTodo={setTodo}
+            handleAddTask={handleAddTask}
+          />
         </div>
         <div className="todoItems mt-5">
-        <TodoList todos={todos} setTodos={setTodos}/>
+          <TodoList todos={todos} setTodos={setTodos} />
+        </div>
       </div>
-      </div>
-      
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
