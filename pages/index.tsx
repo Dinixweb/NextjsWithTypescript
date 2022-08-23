@@ -17,7 +17,6 @@ const Home: NextPage = () => {
     
     setTodo("")
   }
-  console.log(todos)
   return (
     <div>
       <Head>
