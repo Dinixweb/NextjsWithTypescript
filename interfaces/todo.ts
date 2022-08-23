@@ -1,4 +1,4 @@
-import React from "react"
+
 
  export interface todo {
      todo: string
@@ -10,4 +10,9 @@ export interface Todo {
     id: number;
     todo: string;
     isDone:boolean
+}
+ 
+export interface todoList {
+     todos: Todo[]
+     setTodos: React.Dispatch<React.SetStateAction<Todo[]>>
  }
