@@ -70,7 +70,7 @@ useEffect(() => {
 
   return (
     <div className="main">
-      <div key={key} className="row list p-3 bg-warning">
+      <div key={key} className={todo.isDone?"row list p-3 isDone":"row list p-3 bg-warning"} >
         <div className="col-8 ">
           {todo.isDone ? (
             <s className="todo">{todo.todo}</s>

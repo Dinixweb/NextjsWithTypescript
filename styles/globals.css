@@ -44,3 +44,8 @@ a {
   border: none;
   outline: none;
 }
+
+.isDone {
+  background-color: brown;
+  color: aliceblue;
+}
