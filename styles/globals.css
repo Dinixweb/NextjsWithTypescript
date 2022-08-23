@@ -34,3 +34,7 @@ a {
   margin-bottom: 1rem;
   margin-left: -3rem;
 }
+
+.icon {
+  cursor: pointer;
+}
