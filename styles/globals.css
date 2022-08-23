@@ -38,3 +38,9 @@ a {
 .icon {
   cursor: pointer;
 }
+
+.editInput {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
